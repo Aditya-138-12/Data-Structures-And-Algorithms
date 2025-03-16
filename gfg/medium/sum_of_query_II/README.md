@@ -22,6 +22,7 @@ Explaination: In the first query we need sum from 4 to 4 which is 29. In the sec
 You don't need to read input or print anything. Your task is to complete the function querySum() which takes n, arr, q and queries as input parameters and returns the answer for all the queries.
 
 **Expected Time Complexity:** O(n+q)
+
 **Expected Auxiliary Space:** O(n)
 
 ### Constraints:
