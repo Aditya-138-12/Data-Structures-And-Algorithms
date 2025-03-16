@@ -22,3 +22,6 @@ class Solution {
         return ansArr;
     }
 };
+
+// Time Complexity: O(array.size() * queries)
+// Space Complexity: O(1)
