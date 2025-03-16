@@ -25,6 +25,8 @@ You don't need to read input or print anything. Your task is to complete the fun
 **Expected Auxiliary Space:** O(n)
 
 ### Constraints:
-**1 ≤ n, q ≤ 105
+**
+1 ≤ n, q ≤ 105
 1 ≤ arri ≤ 103
-1 ≤ l ≤ r ≤ n**
+1 ≤ l ≤ r ≤ n
+**
