@@ -5,6 +5,10 @@ You need to calculate the following sum over Q queries.:
     <img src="https://github.com/user-attachments/assets/e7af829a-ff9d-42c1-883d-aeec2a28ff1f" alt="Sample Image" style="max-width: 100%; height: auto; display: block;">
 </div>
 
+<div style="background-color: white; padding: 10px; display: inline-block; border: 1px solid black;">
+    <img src="https://github.com/user-attachments/assets/e7af829a-ff9d-42c1-883d-aeec2a28ff1f" alt="Sample Image" style="max-width: 100%; height: auto; display: block;">
+</div>
+
 Assume array to be 1-indexed.
 
 ## Examples:
