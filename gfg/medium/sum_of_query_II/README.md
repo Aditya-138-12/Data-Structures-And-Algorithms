@@ -1,6 +1,8 @@
 # Problem
 You are given an array arr[] of n integers and q queries in an array queries[] of length 2*q containing l, r pair for all q queries. You need to compute the following sum over q queries.
+
 ![image](https://github.com/user-attachments/assets/788d7f1e-f7ef-42f5-ae9d-b4366c7fa0ac)
+
 Note : Array is 1-Indexed.
 
 ## Examples:
