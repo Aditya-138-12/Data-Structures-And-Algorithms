@@ -141,3 +141,93 @@ int main() {
 }
 ```
 
+---
+
+- [x] 4. Given a number N, print whether the number is prime or not.
+
+```
+// Author Aditya Saroha
+// Self Practice Probelm
+#include <iostream>
+using namespace std;
+
+// Check if a number is prime or not?
+
+// Author Aditya Saroha
+// Self Practice Probelm
+#include <iostream>
+using namespace std;
+
+// Check if a number is prime or not?
+
+int main() {
+    
+    int n;
+    cout << "Enter the Number: ";
+    cin >> n;
+    // int flag = 0;
+    // if(n <= 1){
+    //     flag = 2;
+    //     cout << n << " Is not prime number" << endl;
+    // }
+    // int itr = 1;
+    // int number = 1;
+    // while(itr){
+    //     if(n % number == 0){
+    //         itr++;
+    //     }
+    //     if(itr > 3){
+    //         flag = 1;
+    //         break;
+    //     }
+    //     if(number >= n){
+    //         break;
+    //     }
+    //     number++;
+    // }
+    // if(flag == 1){
+    //     cout << n << " Is is not a prime number " << endl;
+    // }else if(flag == 0){
+    //     cout << n << " Is a prime number " << endl;
+    // }
+    
+    // Alternate and very small way;
+    // if(n <= 1){
+    //     cout << n << " is not a prime number" << endl;
+    // }else{
+    // int factor_count = 1;
+    // for(int i = 2; i <= n; i++){
+    //     if(n % i == 0){
+    //         factor_count++;
+    //     }
+    // }
+    // if(factor_count == 2){
+    //     cout << n << " is a prime number" << endl;
+    // }else{
+    //     cout << n << " is not a prime number" << endl;
+    // } 
+    // }
+    
+    // More Efficient way -> best one
+    int flag = 0;
+    if(n <= 1){
+        cout << n << " is not a prime number" << endl;
+    }else{
+        int factor_count = 0;
+        for(int i = 2; i < n - 1; i++){ // This make the TC O(n), to reduce it to o                                // (root(n)) we can just check till root(n)
+                                        // like this i * i <= n
+            if(n % i == 0){
+                cout << n << " is not a prime number";
+                flag = 1;
+                break;
+            }
+        }
+        if(flag == 0){
+            cout << n << " is a prime number" << endl;
+        }
+    }
+    
+    return 0;
+}
+```
+
