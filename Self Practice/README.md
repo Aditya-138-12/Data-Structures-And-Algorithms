@@ -76,3 +76,68 @@ int main() {
 }
 ```
 
+---
+
+- [x] 3. Print the first N number whose sum of digits is equal to K.
+
+```
+// Author Aditya Saroha
+// Self Practice Probelm
+#include <iostream>
+using namespace std;
+
+// Print the first N numbers whose sum of digits is equal to K.
+
+int main() {
+    
+    int n, k;
+    
+    cout << "Enter the Value of N: ";
+    cin >> n;
+    cout << "Enter the value of K: ";
+    cin >> k;
+    
+    //int flag = 0;
+    //int sum = 0;
+    //for(int rem = k; rem > 0; rem /= 10){	// Here if you put rem > 1, then the numbers like 14 will give digit sum of 4, cuz the last iteration didn't happen.
+    //    sum = sum + (rem % 10);
+    //}
+    
+    //int mSum = sum;
+    
+    //while(n){
+    //    for(int number = 1; number++;){
+    //        sum = 0;
+    //        for(int rem = number; rem > 0; rem /= 10){
+    //            sum = sum + (rem % 10);
+    //       }
+    //        if(sum == mSum){
+    //            cout << number << endl;
+    //            n--;
+    //        }else if(n < 1){
+    //            break;
+    //        }else{
+    //            continue;
+    //        }
+    //    }
+    //    break;
+    //}
+
+    int count = 0;  // If it would be 1 then we can put <= in while conditional
+    int number = 1;
+    while(count < n){
+        int sum = 0;
+        for(int rem = number; rem > 0; rem /= 10){
+            sum += rem % 10;
+        }
+        if(sum == k){
+            count ++;
+            cout << number << endl;
+        }
+        number++;
+    }
+
+    return 0;
+}
+```
+
