@@ -237,7 +237,7 @@ int main() {
 
 ```
 
-- [ ] 6. Print the Star pattern like this.
+- [x] 6. Print the Star pattern like this.
 ```
 *****
 *****
@@ -305,5 +305,37 @@ int main() {
 }
 
     
+```
+
+---
+
+- [x] 7. Print the HCF of 2 numbers.
+
+```
+// Author Aditya Saroha
+// Self Practice problem
+#include <iostream>
+using namespace std;
+
+// HCF of 2 numbers.
+
+int main() {
+    
+    int num1, num2;
+    cout << "Enter the value of Num1: ";
+    cin >> num1;
+    cout << "Enter the value of Num2: ";
+    cin >> num2;
+    
+    for(int i = ((num1 > num2) ? (num2) : (num1)); i >= 1; i--){
+        if((num1 % i == 0) && (num2 % i == 0)){
+            cout << "The HCF of " << num1 << " and " << num2 << " is " << i << endl;
+            break;
+        }
+    }
+    
+    return 0;
+}
+
 ```
 
