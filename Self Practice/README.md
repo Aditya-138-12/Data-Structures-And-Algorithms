@@ -231,3 +231,79 @@ int main() {
 }
 ```
 
+- [ ] 5. Print all the prime numbers in the range 1 to N.
+
+```
+
+```
+
+- [ ] 6. Print the Star pattern like this.
+```
+*****
+*****
+*****
+*****
+*****
+
+// Author Aditya Saroha
+// Self Practice problem
+#include <iostream>
+using namespace std;
+
+// Pattern printing.
+
+int main() {
+    
+    int n;
+    cout << "Enter the value of N: ";
+    cin >> n;
+    
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j < n; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+
+```
+
+```
+*****
+ *****
+  *****
+   *****
+    *****
+    
+// Author Aditya Saroha
+// Self Practice problem
+#include <iostream>
+using namespace std;
+
+// Pattern printing.
+
+int main() {
+    
+    int n;
+    cout << "Enter the value of N: ";
+    cin >> n;
+    
+    for(int i = 1; i <= n; i++){
+        for(int k = 1; k < i; k++){
+            cout << " ";
+        }
+        for(int j = 1; j < n; j++){
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+    
+```
+
