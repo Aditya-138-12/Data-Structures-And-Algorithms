@@ -372,3 +372,48 @@ int main() {
 
 ```
 
+- [x] 9. Print a Number Square Pattern.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+
+// Number square pattern.
+// 12345
+// 23456
+// 34567
+// 45678
+// 56789
+
+int main() {
+    
+    int rows_cnt;
+    int cols_cnt;
+    cout << "Print the Number of rows: ";
+    cin >> rows_cnt;
+    cout << "Print the Number of cols: ";
+    cin >> cols_cnt;
+    
+    // for(int row = 1; row <= rows_cnt; row++){
+    //     for(int col = 1; col <= cols_cnt; col++){
+    //         cout << col + row - 1;
+    //     }
+    //     cout << endl;
+    // }
+    
+    // Instead of above we can directly inject the additions in the for loop
+    
+    for(int i = 1; i <= rows_cnt; i++){
+        for(int j = i; j <= cols_cnt + i - 1; j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+```
+
