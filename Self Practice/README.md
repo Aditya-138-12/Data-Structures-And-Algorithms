@@ -339,3 +339,36 @@ int main() {
 
 ```
 
+- [ ] 8. Given a number a N, find all the perfect numbers from 1 to N.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+
+// Given a number N, calculate all the perfect numbers from 1 to N.
+// A number is a perfect, if its all proper divisors sum is equal to the number itself, like for example lets us take 6, now firstly the proper divisors are also called as factors, so the factors of 6 are 1, 2, 3 -> and the sum of this is equal to is 6, hence 6 is a perfect number.
+
+int main() {
+    cout << "Enter the Number N: ";
+    int n;
+    cin >> n;
+    
+    for(int number = 1; number <= n; number++){
+        int factorSum = 0;
+        for(int i = 1; i <= number - 1; i++){
+            if(number % i == 0){
+                factorSum += i;
+            }
+        }
+        if(factorSum == number){
+            cout << "The number " << number << " is a perfect number " << endl;
+        }
+    }
+    
+    return 0;
+}
+
+```
+
