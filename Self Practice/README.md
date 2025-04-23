@@ -339,7 +339,7 @@ int main() {
 
 ```
 
-- [ ] 8. Given a number a N, find all the perfect numbers from 1 to N.
+- [x] 8. Given a number a N, find all the perfect numbers from 1 to N.
 
 ```
 // Author Aditya Saroha
