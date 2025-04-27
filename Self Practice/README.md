@@ -582,3 +582,43 @@ int main() {
 
 ```
 
+- [x] 13. Print the pattern of Isoceles Triangle.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+
+// Isoceles Triangle Pattern, n = 6
+//      *
+//     ***
+//    *****
+//   *******
+//  *********
+// ***********
+
+int main() {
+    
+    int n;
+    cout << "Enter the value of N: ";
+    cin>>n;
+    
+    for(int i = 1; i <= n; i++){
+        int spaces = n - i;
+        int stars = 2*i-1;
+        for(int j = spaces; j > 0; j--){
+            cout << " ";
+        }
+        for(int j = stars; j > 0; j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    
+
+    return 0;
+}
+
+```
+
