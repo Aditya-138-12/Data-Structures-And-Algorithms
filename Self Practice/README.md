@@ -527,3 +527,58 @@ int main() {
 
 ```
 
+- [x] 12. Print the 8 Pattern.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+
+// Print this 8 pattern
+//    ***
+//   *   *
+//   *   *
+//   *   *
+//    ***
+//   *   *
+//   *   *
+//   *   *
+//    ***
+
+int main() {
+    
+    int n;
+    cout << "Enter the value of N: ";
+    cin>>n;
+    
+    if(n < 5){
+        cout << "N cannot be less than 5.";
+        return 0;
+    }
+    
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= n; j++){
+            if(i == 1 || i == n/2 + 1 || i == n){   // Top, middle and bottom has ***
+                if(j == 1 || j == n){   // First and last has space
+                    cout << " ";
+                }else{
+                    cout << "*";
+                }
+            }else{
+                if(j != 1 && j != n){   // First and last if not equal then it has space
+                    cout << " ";
+                }else{
+                    cout << "*";    // Otherwise it is *
+                }
+            }
+        }
+        cout << endl;
+    }
+    
+
+    return 0;
+}
+
+```
+
