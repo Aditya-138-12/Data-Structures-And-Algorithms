@@ -417,3 +417,34 @@ int main() {
 
 ```
 
+- [x] 10. Print the Cross/X pattern.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+// Cross/X pattern.
+
+int main() {
+    
+    int n;
+    cout << "Enter the value of N: ";
+    cin>>n;
+    
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <= n; j++){
+            if(i == j || i + j == n + 1){	// As always the diagonal elements ij sum will be either n+1 or i==j
+                cout << "*";
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
+
+```
+
