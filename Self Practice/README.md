@@ -448,3 +448,82 @@ int main() {
 
 ```
 
+- [x] 11. Print the Diamond Pattern.
+
+```
+// Author Aditya Saroha
+// Self Practice Problem
+#include <iostream>
+using namespace std;
+
+// Diamond pattern.
+// n = 4
+//      *
+//     ***
+//    *****
+//   *******
+//    *****
+//     ***
+//      *
+
+int main() {
+    int n;
+    cout << "Enter the value of N: ";
+    cin>>n;
+    
+    for(int i = 1; i <= n; i++){
+        int stars = (2*i) - 1;  // These are formulas and can be made on spot, by trial and error.
+        int spaces = n - i;
+        for(int k = spaces; k > 0; k--){
+            cout << " ";
+        }
+        for(int j = stars; j > 0; j--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    
+    for(int i = 1; i <= n - 1; i++){
+        int stars = (n-i)*2 - 1;    // These are formulas, and can be made on spot.
+        int spaces = i;
+        for(int j = spaces; j > 0; j--){
+            cout << " ";
+        }
+        for(int k = stars; k > 0; k--){
+            cout << "*";
+        }
+        cout << endl;
+    }
+    
+    cout << endl;
+    cout << endl;
+    cout << endl;
+    
+    
+    // In a single loop.
+    int stars = 1;
+    int spaces = n - 1;
+    
+    for(int i = 1; i <= 2 * n - 1; i++){
+        for(int k = spaces; k > 0; k--){
+            cout << " ";
+        }
+        for(int j = stars; j > 0; j--){
+            cout << "*";
+        }
+        cout << endl;
+        if(i < n){  // Here if n = 4, and when i = 3, then the next iteration should increase the stars and spaces, then the i = 4, now the next itereation should reduce the number of stars and spaces, so that is why we have not kept i <= n, otherwise when i = 4, the iteration will again increase the stars and spaces, which will not print the diamon pattern.
+            stars += 2;
+            spaces--;
+        }else{
+            stars -= 2;
+            spaces++;
+        }
+    }
+    
+
+    return 0;
+}
+
+```
+
