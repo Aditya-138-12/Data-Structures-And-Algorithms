@@ -622,3 +622,44 @@ int main() {
 
 ```
 
+-[x] 14. Find the range of a given array?
+
+```
+// Author Aditya Saroha
+// Self Understanding
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+// Find the rang of the array. It means difference between the highest element and lowest element.
+
+int main() {
+    
+    int n = 0;
+    cout << "Enter the value of N: ";
+    cin >> n;
+    
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        cout << "Enter the value of " << i << " element: ";
+        cin >> arr[i];
+    }
+    
+    int high = arr[0], low = arr[0];
+    
+    for(int i = 0; i < n; i++){
+        if(arr[i] > high){
+            high = arr[i];
+        }
+        if(arr[i] < low){
+            low = arr[i];
+        }
+    }
+    cout << "The highest element is " << high << " and the lowest element is " << low << endl;
+    cout << "The Range of the array is: " << high - low << endl;
+    
+
+    return 0;
+}
+```
+
