@@ -622,7 +622,7 @@ int main() {
 
 ```
 
--[x] 14. Find the range of a given array?
+- [x] 14. Find the range of a given array?
 
 ```
 // Author Aditya Saroha
@@ -662,4 +662,89 @@ int main() {
     return 0;
 }
 ```
+- [x] 15. Some syntactical sugar about the cpp classes.
 
+```
+// Author: Aditya Saroha
+// Self practice problem
+// Example of method overloading, if you use float by default it will give a type resolution error, as in cpp the default type is double instead of float, hence the erro.
+
+// Exact error is here
+
+// Here, 10.3 and 20.2 are of type double by default in C++. But you haven't overloaded provider for double — only for int and float.
+
+// So, no exact match is found, and the compiler has to choose whether to convert double to float or int. This could lead to ambiguity or an implicit conversion (which might work, but isn't ideal).
+// To resolve it for time being, you can either typecast the input parameters like this, test::addition(10.2f, 23.4f) << endl; , i.e. by using a 'f'.
+
+#include <iostream>
+using namespace std;
+
+class test{
+public:
+    static int provider(int a, int b){
+        int sum = addition(a, b);
+        return sum;
+    }
+    
+    static double provider(double a, double b){
+        double sum = addition(a, b);
+        return sum;
+    }
+
+private:
+    static int addition(int a, int b){
+        return a + b;
+    }
+    
+    static double addition(double a, double b){
+        return a + b;
+    }
+    
+};  // Always put semi-colon after the class definition.
+
+int main() {
+    
+    cout << "The sum is: " << test::provider(10.3, 20.2) << endl;
+
+    return 0;
+}
+
+```
+
+- [x] 16. Some sytantical sugar regarding the Templates!
+
+```
+// Author: Aditya Saroha
+// Self practice problem
+// Example of templates, now right now I donot undertand why do we still need method overloading instead of templates, but the work of templates is that instead a writing several overloads, we can write a generic code to represent the functionality of that class. 
+
+#include <iostream>
+using namespace std;
+
+// Now definig the templates instead of method overloading.
+
+class test{
+public:
+    template <typename T>
+    static T provider(T a, T b){
+        T sum = addition<T>(a, b);
+        return sum;
+    }
+
+private:
+    // A dyanmic setter kind function instead of method overloading.
+    template <typename T>
+    static T addition(T a, T b){
+        return a + b;
+    }
+    
+};  // Always put semi-colon after the class definition.
+
+int main() {
+    
+    cout << "The sum is: " << test::provider<long double>(10.3, 20.2) << endl;
+
+    return 0;
+}
+
+```
