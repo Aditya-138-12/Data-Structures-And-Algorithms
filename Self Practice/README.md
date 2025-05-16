@@ -231,9 +231,49 @@ int main() {
 }
 ```
 
-- [ ] 5. Print all the prime numbers in the range 1 to N.
+- [x] 5. Print all the prime numbers in the range 1 to N.
 
 ```
+// Author: Aditya Saroha
+// Self Practice Problem
+
+#include <iostream>
+using namespace std;
+
+// Problem: Print all the prime numbers in the range 1 to N.
+
+class testPrime{
+public:
+    static void check_prime(int n){
+        int flag = 0;
+        for(int i = 2; i < n - 1; i++){
+            if(n % i == 0){
+                cout << n << " is Not Prime." << endl;
+                flag = 1;
+                break;
+            }
+        }
+        if(flag == 0){
+            cout << n <<" is Prime." << endl;
+        }
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter the range: ";
+    cin >> n;
+    
+    if(n <= 1){
+        cout << "Enter a larger number." << endl;
+    }
+    
+    for(int i = 2; i < n; i++){
+        testPrime::check_prime(i);
+    }
+
+    return 0;
+}
 
 ```
 
