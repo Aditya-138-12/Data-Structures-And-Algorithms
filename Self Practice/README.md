@@ -788,3 +788,55 @@ int main() {
 }
 
 ```
+
+- [x] 17. Some pattern priting using the typecasting method.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problem
+
+#include <iostream>
+using namespace std;
+
+// Pattern priting problem, using clever techniques -> i.e. typecasting.
+// EDCBA
+// EDCBA
+// EDCBA
+// EDCBA
+// EDCBA
+
+// int main() {
+    
+//     for(int i = 1; i <= 5; i++){
+//         for(int j = 5; j >= 1; j--){
+//             cout << (char)(64 + j);
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
+
+// Pattern priting problem, using clever techniques -> i.e. typecasting.
+// AAAAA
+// EEEEE
+// IIIII
+// OOOOO
+// UUUUU
+
+int main(){
+    int updation_char = 1;
+    for(int i = 1; i <= 5; i++){
+        for(int j = 1; j <= 5; j++){
+            cout << (char)(64 +  updation_char);
+        }
+        cout << endl;
+        if(i > 2){
+            updation_char += 6;
+        }else{
+            updation_char += 4;
+        }
+    }
+}
+
+```
