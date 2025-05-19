@@ -840,3 +840,35 @@ int main(){
 }
 
 ```
+
+- [x] 18. Determine whether a number is palindrome or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice
+
+#include <iostream>
+using namespace std;
+
+// Problem: Tell whether a number is a palindrome or not.
+
+int main() {
+    int n;
+    int reverse_digit = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    for(int i = n; i > 0; i /= 10){     // i > 1 condition fails for 11, 1121, cuz in this in the first iteration 11 -> divided by 10 becomes 1, now as the condition states i > 1, so it will come out of the loop and hence this will give a output of not Palindrome, which is not we want, so hence we should use i > 0.
+        reverse_digit = (reverse_digit * 10) + (i % 10);
+    }
+    
+    if(reverse_digit == n){
+        cout << "Palindrome" << endl;
+    }else{
+        cout << "Not Palindrome" << endl;
+    }
+
+    return 0;
+}
+
+```
