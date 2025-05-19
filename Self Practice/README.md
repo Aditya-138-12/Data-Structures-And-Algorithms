@@ -961,3 +961,52 @@ int main() {
 }
 
 ```
+
+- [x] 21. Wrtie a cpp program to determine whether a number is Adam's number or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problems
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Write a cpp program determine whether a number is Adam's number or not.
+
+// If we have 12, then square of 12 is 144
+// Now reverse of 12 is 21, and square of 21 is 441, and reverse of 441 is 144, 
+// Hence these are equal, so the number 12 is Adam's number.
+
+
+int main() {
+    int n;
+    int sq_1 = 0;
+    int rev_n = 0;
+    int sq_rev_n = 0;
+    int rev_sq_rev_n = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    sq_1 = pow(n, 2);
+    
+    for(int i = n; i > 0; i /= 10){
+        rev_n = (rev_n * 10) + (i % 10);
+    }
+    
+    sq_rev_n = pow(rev_n, 2);
+    
+    for(int i = sq_rev_n; i > 0; i /= 10){
+        rev_sq_rev_n = (rev_sq_rev_n * 10) + (i % 10);
+    }
+    
+    if(rev_sq_rev_n == sq_1){
+        cout << "Adam's Number" << endl;
+    }else{
+        cout << "Not Adam's Number" << endl;
+    }
+
+    return 0;
+    
+}
+
+```
