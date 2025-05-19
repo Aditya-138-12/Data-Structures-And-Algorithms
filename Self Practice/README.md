@@ -872,3 +872,48 @@ int main() {
 }
 
 ```
+
+- [x] 19. Write a program to check whether a number is tech or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Write a c++/cpp program to check whether the given number is `tech` or not.
+
+
+// A tech number is a number which when taken 2 digits at a time, and then added and then squared, equals the same number.
+// 2025
+//  |
+// 20 & 25 (Now add them)
+//  45 (now sqare it)
+//  45**2
+//  2025
+
+// More formal definition
+// A tech number is a number that has an even number of digits. When split into two equal halves, the sum of these halves, when squared, equals the original number. For example, 3025 is a tech number because (30 + 25)² = 55² = 3025
+
+int main() {
+    int n;
+    int main_number = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    for(int i = n; i > 0; i /= 100){    // Also dividing by 100 will give 2 digits at a time.
+        main_number = main_number + (i % 100);
+    }
+    
+    if(pow(main_number, 2) == n){
+        cout << "Tech" << endl;
+    }else{
+        cout << "Not Tech" << endl;
+    }
+
+    return 0;
+}
+
+```
