@@ -1010,3 +1010,60 @@ int main() {
 }
 
 ```
+
+- [x] 22. Determine a number is Twisted Prime or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problems
+
+#include <iostream>
+using namespace std;
+
+// Question: Write a cpp program to check whether a given number is Twisted Prime or not?
+
+// Twisted Prime -> If the given number and its reverse are both prime then we can say that the number is prime.
+
+class check_prime{
+public:
+    static int prime(int n){
+        int flag = 0;
+        for(int i = 2; i < n - 1; i++){
+            if((n % i) == 0){
+                flag = 1;
+                break;
+            }
+        }
+        return ((flag == 1) ? (1) : (0));
+    }
+};
+
+int main() {
+    
+    int n;
+    int rev_n = 0;
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    if(n <= 1){
+        cout << "Enter a bigger number." << endl;
+    }
+    
+    for(int i = n; i > 0; i /= 10){
+        rev_n = (rev_n * 10) + (i % 10);
+    }
+    
+    int check_n_prime = check_prime::prime(n);
+    int check_rev_n_prime = check_prime::prime(rev_n);
+    
+    if(check_n_prime == 1 || check_rev_n_prime == 1){
+        cout << "Not Twisted Prime" << endl;
+    }else{
+        cout << "Twisted Prime" << endl;
+    }
+
+    return 0;
+    
+}
+
+```
