@@ -1067,3 +1067,64 @@ int main() {
 }
 
 ```
+
+- [x] 23. Determine whether a number is Palindrome Prime or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problems
+
+#include <iostream>
+using namespace std;
+
+// Question: Write a cpp program to check whether a number is palindrome prime or not?
+
+// Palindrome Prime, if a given number is both palindrome and prime at the same time then the number is called as Palindrome Prime.
+
+class palindrome_prime{
+public:
+
+    static int check_palindrome(int n){
+        int reverse_n = 0;
+        for(int i = n; i > 0; i /= 10){
+            reverse_n = (reverse_n * 10) + (i % 10);
+        }
+        return ((reverse_n == n) ? (0) : (1));  // If palindrome then return 0, otherwise 1.
+    }
+    
+    static int check_prime(int n){
+        int flag = 0;
+        for(int i = 2; i < n - 1; i++){
+            if(n % i == 0){
+                flag = 1;
+                break;
+            }
+        }
+        return ((flag == 1) ? (1) : (0));
+    }
+    
+};
+
+int main() {
+    
+    int n;
+    cout << "Enter a Number: ";
+    cin >> n;
+    if(n <= 1){
+        cout << "Enter a bigger number. " << endl;
+        return 0;
+    }
+    
+    int check_n_palindrome = palindrome_prime::check_palindrome(n);
+    int check_n_prime = palindrome_prime::check_prime(n);
+    
+    if(check_n_palindrome == 1 || check_n_prime == 1){
+        cout << "Not Palindrome Prime" << endl;
+    }else{
+        cout << "Palindrome Prime" << endl;
+    }
+    
+    return 0;
+}
+
+```
