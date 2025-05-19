@@ -917,3 +917,47 @@ int main() {
 }
 
 ```
+
+- [x] 20. Write a cpp program to determine whether a number is Ramaanujam Number or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problems
+#include <iostream>
+using namespace std;
+
+// Write a c++/cpp program to check whether the given number is RamaAnujam or not.
+
+// 1729
+// 1 + 7 + 2 + 9
+// 19
+// Now take reverse of 19 -> 91
+// Now multiply 19 and 91
+// 19*91 = 1729
+
+int main() {
+    int n;
+    int sum_of_digits = 0;
+    int reverse_number = 0;
+    
+    cout << "Enter a number: ";
+    cin >> n;
+    
+    for(int i = n; i > 0; i /= 10){
+        sum_of_digits = sum_of_digits + (i % 10);
+    }
+    
+    for(int i = sum_of_digits; i > 0; i /= 10){
+        reverse_number = (reverse_number * 10) + (i % 10);
+    }
+    
+    if(sum_of_digits * reverse_number == n){
+        cout << "Ramaanujam Number" << endl;
+    }else{
+        cout << "Not Ramaanujam Number" << endl;
+    }
+
+    return 0;
+}
+
+```
