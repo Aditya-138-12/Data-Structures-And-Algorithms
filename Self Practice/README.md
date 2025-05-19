@@ -1185,3 +1185,42 @@ int main() {
 }
 
 ```
+
+- [x] 25. A cool pattern priting problem.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problem
+
+#include <iostream>
+using namespace std;
+
+// Question: Pattern Priting.
+// Aa 
+// Bb Bb 
+// Bb Bb 
+// Cc Cc Cc 
+// Cc Cc Cc 
+// Cc Cc Cc 
+// Dd Dd Dd Dd 
+// Dd Dd Dd Dd 
+// Dd Dd Dd Dd 
+// Dd Dd Dd Dd 
+
+// Also used here typecasting concept.
+
+int main() {
+    
+    for(int i = 1; i <= 4; i++){
+        for(int j = 1; j <= i; j++){
+            for(int k = 1; k <= i; k++){
+                cout << (char)(64 + i) << (char)(96 + i) << " ";
+        }
+            cout << endl;
+        }
+    }
+    
+    return 0;
+}
+
+```
