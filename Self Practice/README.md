@@ -1128,3 +1128,60 @@ int main() {
 }
 
 ```
+
+- [x] 24. Determine whether a number is Powerfull or not.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problems
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Question: Write a cpp program to check whether a given number is powerfull or not.
+
+// 36 is powerfull, cuz the prime factors of it are 2 and 3, the square of these prime factors, is 4 and 9, and their multiplication is 36.
+
+class check_prime{
+public:
+    static int prime(int n){
+        if(n <= 1){
+            return 0;
+        }
+        int flag = 0;
+        for(int i = 2; i < n - 1; i++){
+            if(n % i == 0){
+                flag = 1;
+                break;
+            }
+        }
+        return ((flag == 1) ? (0) : (1));
+    }
+};
+
+int main() {
+    int n;
+    int computed_number = 1;
+    cout << "Enter a Number: ";
+    cin >> n;
+    
+    for(int i = 1; i <= n; i++){
+        if((n % i == 0) && (check_prime::prime(i))){
+            //cout << "This is one of the factors:  " << i << endl;
+            computed_number = computed_number * pow(i, 2);
+            //cout << "This is the computed Number: " << computed_number << endl;
+        }
+    }
+    
+    if(computed_number == n){
+        cout << "Powerfull Number" << endl;
+    }else{
+        cout << "Not Powerfull Number" << endl;
+        cout << computed_number << endl;
+    }
+    
+    return 0;
+}
+
+```
