@@ -35,7 +35,7 @@ Instead of analyzing exact iterations, we use an upper-bound technique:
 
 
 From number theory:
-![image](https://github.com/user-attachments/assets/739ddc4c-71b8-441e-8cbe-8dca0ce0de98)
+  ![image](https://github.com/user-attachments/assets/739ddc4c-71b8-441e-8cbe-8dca0ce0de98)
 
 ---
 
