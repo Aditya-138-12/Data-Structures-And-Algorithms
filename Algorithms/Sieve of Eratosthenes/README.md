@@ -62,4 +62,4 @@ From number theory:
 
 ---
 
-Let me know if you'd like to include optimizations like **Segmented Sieve** or **Bitset Sieve**.
+Follow ups are **Segmented Sieve** or **Bitset Sieve**.
