@@ -18,6 +18,10 @@ int main() {
     }
     
     // Main block, where all the primes are mearked in the array. ->   O(N*loglog(N))
+    // This is the optimized Sieve of Eratosthenes.
+    // We only iterate i from 2 to sqrt(N), because any composite number greater than sqrt(N)
+    // will already be marked by its smaller prime factors.
+    // For each prime i, we mark all multiples of i starting from i*i as non-prime 
     // But a more optimized version do exists, where the outer loops only run till suqare root of N, and the inner loop will start from i*i rather than 2*i.
     for(int i = 2; i*i <= n; i++){
         if(arr[i] == 1){
