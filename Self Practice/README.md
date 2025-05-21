@@ -1224,3 +1224,43 @@ int main() {
 }
 
 ```
+
+- [x] 26. Print all the divisors of a number in any order.
+
+```
+// Author: Aditya Saroha
+// Self Practice Problem
+
+#include <iostream>
+using namespace std;
+
+// Print all the divisors of a number, in any order with optimized time complexity.
+
+int main() {
+    int n;
+    cout << "Enter a number to print its divisors: ";
+    cin >> n;
+    
+    // TC is O(N), gotta reduce it.
+    //
+    // for(int i = 1; i <= n; i++){
+    //     if(n % i == 0){
+    //         cout << i << endl;
+    //     }
+    // }
+    
+    // More optimized solution. TC is O(sqrt(N)).
+    // Basic intution is, for a number let us say, 36, we donot need to go till 36 to find all the divisors, for 1, we have 1x36 = 36, for 2 we have 2x18 = 36, so how do we get the 18, by doing n/i !! Hence the intution.
+    for(int i = 1; i*i <= n; i++){
+        if(n % i == 0){
+            cout << i << endl;
+            if(n/i != i){   // This is to handle the edge cases, like 6x6 = 36, and 7x7 = 49, so to avoid priting them twice.
+                cout << n/i << endl;
+            }
+        }
+    }
+
+    return 0;
+}
+
+```
