@@ -1195,7 +1195,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-// Question: Pattern Priting.
+// Question: Pattern Printing.
 // Aa 
 // Bb Bb 
 // Bb Bb 
